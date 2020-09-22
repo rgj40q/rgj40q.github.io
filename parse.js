@@ -1,5 +1,3 @@
-"use strict";
-
 function button_onclick() {
     var response, grammar, text, result, parser, error, ast, ok;
     response = fetch("grammar.pegjs");
