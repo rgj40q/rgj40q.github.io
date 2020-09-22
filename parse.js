@@ -2,9 +2,9 @@
 
 function button_onclick() {
     var response, grammar, text, result, parser, error, ast;
-    response = await fetch("grammar.pegjs");
+    response = fetch("grammar.pegjs");
     if (response.ok) {
-        grammar = await response.text();
+        grammar = response.text();
         text = document.getElementById("text");
         try {
             parser = peg.generate(grammar);
