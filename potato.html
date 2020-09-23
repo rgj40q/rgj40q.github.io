@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>prominent potato</title>
-<script src="peg-0.10.0.js" type="text/javascript"></script>
+<script src="peg-0.10.0.min.js" type="text/javascript"></script>
+<script src="grammar.js" type="text/javascript"></script>
+<script src="dict.js" type="text/javascript"></script>
 <script src="util.js" type="text/javascript"></script>
 <style>
 ul {
@@ -16,9 +18,28 @@ ul {
 </style>
 </head>
 <body>
-<p>This page is about the conlang codenamed 'prominent potato'.</p>
-<textarea id="textarea" rows="5">...</textarea><br/>
-<button id="button" onclick=button_onclick()>parse</button>
-<div id="result"></div>
+<p>This page is about the conlang 'Prominent Potato' (PP).
+<h2>I. Phonology and orthography</h2>
+<p>Letters include a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, x, z. Capital letters are not used.
+<p>Letters are pronounced as in IPA except: c /ʃ/, j /ʒ/, and h /ɣ/. NB: x /x/.
+<p>Consonants include m, n, r, l, b, d, g, p, t, k, v, z, j, h, f, s, c, x.
+<p>Vowels include:
+<ul style="list-style-type:disc">
+<li>monophthongs i, u, e, o, a;
+<li>rising diphthongs iu, ie, ue, io, uo, ia, ua;
+<li>falling diphthongs ui, ei, eu, oi, ou, ai, au.</ul>
+<p>Syllable structure is CV in stem, and CV(C) in ending.
+<p>Borrowed words and personal names that do not fit in these rules must be adapted with either throwing away offending sounds, or inserting additional sounds to break up clusters. The default choice is 'h /ɣ/' for hiatus and 'e' for consonant clusters.
+<p>PP is a syllable-timed language. The weak accent is on the first syllable. There is little to no vowel reduction. Intonation is used for emphasis.
+<h2>II. Morphology</h2>
+<p>Every productive stem has a <i>valency</i> (how many direct objects it may take including the subject) and in some cases a <i>shift</i> (is the order of direct objects changed and how).
+<p>...
+<h2>III. Syntax</h2>
+<p>...
+<p>Parser:</p>
+<textarea id="textarea" rows="5">hoi ta tamaisuanan kit man gadaval</textarea>
+<br/>
+<button onclick=button_onclick()>parse</button>
+<div id="result"><br/><br/><br/><br/><br/><br/><br/><br/></div>
 </body>
 </html>
