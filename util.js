@@ -4,6 +4,7 @@ function button_onclick() {
         parser = peg.generate(grammar);
         try {
             ast = parser.parse(document.getElementById("text").value);
+            console.log(ast);
             result = ast2html(ast);
         } catch(error) {
             result = error.message;
