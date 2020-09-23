@@ -1,6 +1,8 @@
 function ast2html(ast) {
-    var result = "<ul>";
-    result += "<li>" + ast.name + "</li>";
+    var result = "";
+    if (ast.name) {
+        result += "<ul><li>" + ast.name + "</li>";
+    }
     if (ast.children) {
         for (const element of ast.children) {
             if (element) {
@@ -8,7 +10,9 @@ function ast2html(ast) {
             }
         }
     }
-    result += "</ul>";
+    if (ast.name) {
+        result += "</ul>";
+    }
     return result;
 }
 
