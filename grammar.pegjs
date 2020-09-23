@@ -458,299 +458,299 @@ Apposition3_phrase
 
 Verb0
     = a:Stem0 b:Verb_suffix Whitespace {
-        return {name:(a.join("") + b + ": verb, valency=0"), children:[]};
+        return {name:(a + b + ": verb, valency=0"), children:[]};
     }
 
 Verb1
     = a:Stem1 b:Verb_suffix Whitespace {
-        return {name:(a.join("") + b + ": verb, valency=1"), children:[]};
+        return {name:(a + b + ": verb, valency=1"), children:[]};
     }
 
 Verb2
     = a:Stem2 b:Verb_suffix Whitespace {
-        return {name:(a.join("") + b + ": verb, valency=2"), children:[]};
+        return {name:(a + b + ": verb, valency=2"), children:[]};
     }
 
 Verb3
     = a:Stem3 b:Verb_suffix Whitespace {
-        return {name:(a.join("") + b + ": verb, valency=3"), children:[]};
+        return {name:(a + b + ": verb, valency=3"), children:[]};
     }
 
 Verb4
     = a:Stem4 b:Verb_suffix Whitespace {
-        return {name:(a.join("") + b + ": verb, valency=4"), children:[]};
+        return {name:(a + b + ": verb, valency=4"), children:[]};
     }
 
 Noun0_valency1 = a:Stem1 b:Noun_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=1, level=0"), children:[]};
+        return {name:(a + b + c + ": noun, valency=1, level=0"), children:[]};
     }
 
 Noun0_valency2 = a:Stem2 b:Noun_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=2, level=0"), children:[]};
+        return {name:(a + b + c + ": noun, valency=2, level=0"), children:[]};
     }
 
 Noun0_valency3 = a:Stem3 b:Noun_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=3, level=0"), children:[]};
+        return {name:(a + b + c + ": noun, valency=3, level=0"), children:[]};
     }
 
 Noun0_valency4 = a:Stem4 b:Noun_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=4, level=0"), children:[]};
+        return {name:(a + b + c + ": noun, valency=4, level=0"), children:[]};
     }
 
 Noun1_valency1 = a:Stem1 b:Noun_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=1, level=1"), children:[]};
+        return {name:(a + b + c + ": noun, valency=1, level=1"), children:[]};
     }
 
 Noun1_valency2 = a:Stem2 b:Noun_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=2, level=1"), children:[]};
+        return {name:(a + b + c + ": noun, valency=2, level=1"), children:[]};
     }
 
 Noun1_valency3 = a:Stem3 b:Noun_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=3, level=1"), children:[]};
+        return {name:(a + b + c + ": noun, valency=3, level=1"), children:[]};
     }
 
 Noun1_valency4 = a:Stem4 b:Noun_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=4, level=1"), children:[]};
+        return {name:(a + b + c + ": noun, valency=4, level=1"), children:[]};
     }
 
 Noun2_valency1 = a:Stem1 b:Noun_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=1, level=2"), children:[]};
+        return {name:(a + b + c + ": noun, valency=1, level=2"), children:[]};
     }
 
 Noun2_valency2 = a:Stem2 b:Noun_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=2, level=2"), children:[]};
+        return {name:(a + b + c + ": noun, valency=2, level=2"), children:[]};
     }
 
 Noun2_valency3 = a:Stem3 b:Noun_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=3, level=2"), children:[]};
+        return {name:(a + b + c + ": noun, valency=3, level=2"), children:[]};
     }
 
 Noun2_valency4 = a:Stem4 b:Noun_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=4, level=2"), children:[]};
+        return {name:(a + b + c + ": noun, valency=4, level=2"), children:[]};
     }
 
 Noun3_valency1 = a:Stem1 b:Noun_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=1, level=3"), children:[]};
+        return {name:(a + b + c + ": noun, valency=1, level=3"), children:[]};
     }
 
 Noun3_valency2 = a:Stem2 b:Noun_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=2, level=3"), children:[]};
+        return {name:(a + b + c + ": noun, valency=2, level=3"), children:[]};
     }
 
 Noun3_valency3 = a:Stem3 b:Noun_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=3, level=3"), children:[]};
+        return {name:(a + b + c + ": noun, valency=3, level=3"), children:[]};
     }
 
 Noun3_valency4 = a:Stem4 b:Noun_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": noun, valency=4, level=3"), children:[]};
+        return {name:(a + b + c + ": noun, valency=4, level=3"), children:[]};
     }
 
 Gerund0_valency0 = a:Stem0 b:Gerund_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=0, level=0"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=0, level=0"), children:[]};
     }
 
 Gerund0_valency1 = a:Stem1 b:Gerund_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=1, level=0"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=1, level=0"), children:[]};
     }
 
 Gerund0_valency2 = a:Stem2 b:Gerund_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=2, level=0"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=2, level=0"), children:[]};
     }
 
 Gerund0_valency3 = a:Stem3 b:Gerund_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=3, level=0"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=3, level=0"), children:[]};
     }
 
 Gerund0_valency4 = a:Stem4 b:Gerund_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=4, level=0"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=4, level=0"), children:[]};
     }
 
 Gerund1_valency0 = a:Stem0 b:Gerund_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=0, level=1"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=0, level=1"), children:[]};
     }
 
 Gerund1_valency1 = a:Stem1 b:Gerund_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=1, level=1"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=1, level=1"), children:[]};
     }
 
 Gerund1_valency2 = a:Stem2 b:Gerund_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=2, level=1"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=2, level=1"), children:[]};
     }
 
 Gerund1_valency3 = a:Stem3 b:Gerund_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=3, level=1"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=3, level=1"), children:[]};
     }
 
 Gerund1_valency4 = a:Stem4 b:Gerund_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=4, level=1"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=4, level=1"), children:[]};
     }
 
 Gerund2_valency0 = a:Stem0 b:Gerund_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=0, level=2"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=0, level=2"), children:[]};
     }
 
 Gerund2_valency1 = a:Stem1 b:Gerund_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=1, level=2"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=1, level=2"), children:[]};
     }
 
 Gerund2_valency2 = a:Stem2 b:Gerund_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=2, level=2"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=2, level=2"), children:[]};
     }
 
 Gerund2_valency3 = a:Stem3 b:Gerund_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=3, level=2"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=3, level=2"), children:[]};
     }
 
 Gerund2_valency4 = a:Stem4 b:Gerund_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=4, level=2"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=4, level=2"), children:[]};
     }
 
 Gerund3_valency0 = a:Stem0 b:Gerund_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=0, level=3"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=0, level=3"), children:[]};
     }
 
 Gerund3_valency1 = a:Stem1 b:Gerund_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=1, level=3"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=1, level=3"), children:[]};
     }
 
 Gerund3_valency2 = a:Stem2 b:Gerund_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=2, level=3"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=2, level=3"), children:[]};
     }
 
 Gerund3_valency3 = a:Stem3 b:Gerund_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=3, level=3"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=3, level=3"), children:[]};
     }
 
 Gerund3_valency4 = a:Stem4 b:Gerund_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": gerund, valency=4, level=3"), children:[]};
+        return {name:(a + b + c + ": gerund, valency=4, level=3"), children:[]};
     }
 
 Adverb0_valency1 = a:Stem1 b:Adverb_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=1, level=0"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=1, level=0"), children:[]};
     }
 
 Adverb0_valency2 = a:Stem2 b:Adverb_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=2, level=0"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=2, level=0"), children:[]};
     }
 
 Adverb0_valency3 = a:Stem3 b:Adverb_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=3, level=0"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=3, level=0"), children:[]};
     }
 
 Adverb0_valency4 = a:Stem4 b:Adverb_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=4, level=0"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=4, level=0"), children:[]};
     }
 
 Adverb1_valency1 = a:Stem1 b:Adverb_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=1, level=1"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=1, level=1"), children:[]};
     }
 
 Adverb1_valency2 = a:Stem2 b:Adverb_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=2, level=1"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=2, level=1"), children:[]};
     }
 
 Adverb1_valency3 = a:Stem3 b:Adverb_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=3, level=1"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=3, level=1"), children:[]};
     }
 
 Adverb1_valency4 = a:Stem4 b:Adverb_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=4, level=1"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=4, level=1"), children:[]};
     }
 
 Adverb2_valency1 = a:Stem1 b:Adverb_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=1, level=2"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=1, level=2"), children:[]};
     }
 
 Adverb2_valency2 = a:Stem2 b:Adverb_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=2, level=2"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=2, level=2"), children:[]};
     }
 
 Adverb2_valency3 = a:Stem3 b:Adverb_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=3, level=2"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=3, level=2"), children:[]};
     }
 
 Adverb2_valency4 = a:Stem4 b:Adverb_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=4, level=2"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=4, level=2"), children:[]};
     }
 
 Adverb3_valency1 = a:Stem1 b:Adverb_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=1, level=3"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=1, level=3"), children:[]};
     }
 
 Adverb3_valency2 = a:Stem2 b:Adverb_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=2, level=3"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=2, level=3"), children:[]};
     }
 
 Adverb3_valency3 = a:Stem3 b:Adverb_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=3, level=3"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=3, level=3"), children:[]};
     }
 
 Adverb3_valency4 = a:Stem4 b:Adverb_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": adverb, valency=4, level=3"), children:[]};
+        return {name:(a + b + c + ": adverb, valency=4, level=3"), children:[]};
     }
 
 Apposition0_valency1 = a:Stem1 b:Apposition_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=1, level=0"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=1, level=0"), children:[]};
     }
 
 Apposition0_valency2 = a:Stem2 b:Apposition_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=2, level=0"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=2, level=0"), children:[]};
     }
 
 Apposition0_valency3 = a:Stem3 b:Apposition_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=3, level=0"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=3, level=0"), children:[]};
     }
 
 Apposition0_valency4 = a:Stem4 b:Apposition_suffix c:Level0_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=4, level=0"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=4, level=0"), children:[]};
     }
 
 Apposition1_valency1 = a:Stem1 b:Apposition_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=1, level=1"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=1, level=1"), children:[]};
     }
 
 Apposition1_valency2 = a:Stem2 b:Apposition_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=2, level=1"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=2, level=1"), children:[]};
     }
 
 Apposition1_valency3 = a:Stem3 b:Apposition_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=3, level=1"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=3, level=1"), children:[]};
     }
 
 Apposition1_valency4 = a:Stem4 b:Apposition_suffix c:Level1_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=4, level=1"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=4, level=1"), children:[]};
     }
 
 Apposition2_valency1 = a:Stem1 b:Apposition_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=1, level=2"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=1, level=2"), children:[]};
     }
 
 Apposition2_valency2 = a:Stem2 b:Apposition_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=2, level=2"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=2, level=2"), children:[]};
     }
 
 Apposition2_valency3 = a:Stem3 b:Apposition_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=3, level=2"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=3, level=2"), children:[]};
     }
 
 Apposition2_valency4 = a:Stem4 b:Apposition_suffix c:Level2_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=4, level=2"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=4, level=2"), children:[]};
     }
 
 Apposition3_valency1 = a:Stem1 b:Apposition_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=1, level=3"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=1, level=3"), children:[]};
     }
 
 Apposition3_valency2 = a:Stem2 b:Apposition_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=2, level=3"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=2, level=3"), children:[]};
     }
 
 Apposition3_valency3 = a:Stem3 b:Apposition_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=3, level=3"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=3, level=3"), children:[]};
     }
 
 Apposition3_valency4 = a:Stem4 b:Apposition_suffix c:Level3_suffix Whitespace {
-        return {name:(a.join("") + b + c + ": apposition, valency=4, level=3"), children:[]};
+        return {name:(a + b + c + ": apposition, valency=4, level=3"), children:[]};
     }
 
 Adverb0_conjunction = a:("ma" / "mi" / "mu") Whitespace {
@@ -833,15 +833,15 @@ Level2_suffix = "i"
 
 Level3_suffix = "u"
 
-Stem0 = a:Consonant bs:Syllable* c:"o" { return [a].concat(bs).concat(c); }
+Stem0 = a:Consonant bs:Syllable* c:"o" { return [a].concat(bs).concat(c).join(""); }
 
-Stem1 = a:Consonant bs:Syllable* c:"a" { return [a].concat(bs).concat(c); }
+Stem1 = a:Consonant bs:Syllable* c:"a" { return [a].concat(bs).concat(c).join(""); }
 
-Stem2 = a:Consonant bs:Syllable* c:("i"/"ia") { return [a].concat(bs).concat(c); }
+Stem2 = a:Consonant bs:Syllable* c:("i"/"ia") { return [a].concat(bs).concat(c).join(""); }
 
-Stem3 = a:Consonant bs:Syllable* c:("u"/"ua"/"ui") { return [a].concat(bs).concat(c); }
+Stem3 = a:Consonant bs:Syllable* c:("u"/"ua"/"ui") { return [a].concat(bs).concat(c).join(""); }
 
-Stem4 = a:Consonant bs:Syllable* c:("e"/"ie"/"ei"/"eu") { return [a].concat(bs).concat(c); }
+Stem4 = a:Consonant bs:Syllable* c:("e"/"ie"/"ei"/"eu") { return [a].concat(bs).concat(c).join(""); }
 
 Syllable = !(Vowel [rnlmt] Vowel? Whitespace) a:Vowel b:Consonant { return a + b; }
 
