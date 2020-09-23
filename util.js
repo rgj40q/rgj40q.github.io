@@ -1,6 +1,6 @@
 function ast2html(ast) {
     var result = "";
-    if (Array.isArray(ast) {
+    if (Array.isArray(ast)) {
         if (ast) {
             for (const element of ast) {
                 if (element) {
