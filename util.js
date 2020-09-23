@@ -13,9 +13,8 @@ function ast2html(ast) {
 }
 
 function button_onclick() {
-    var parser, grammar, ast, result, error, response;
-    response = fetch("grammar.pegjs");
-    grammar = response.text();
+    var parser, grammar, ast, result, error;
+    grammar = fetch("grammar.pegjs").text();
     parser = peg.generate(grammar);
     try {
         ast = parser.parse(document.getElementById("text").value);
