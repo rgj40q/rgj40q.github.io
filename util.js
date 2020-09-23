@@ -1,6 +1,6 @@
 fetch("grammar.pegjs").then(response => response.text()).then(grammar => {
     let parser = peg.generate(grammar);
-    document.getElementById("btn").onclick = error => {
+    document.getElementById("button").onclick = error => {
         try {
             let ast = parser.parse(document.getElementById("text").value);
             console.log(ast);
