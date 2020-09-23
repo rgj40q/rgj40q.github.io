@@ -3,7 +3,7 @@ function button_onclick() {
     response = fetch("grammar.pegjs");
     grammar = response.text;
     text = document.getElementById("text").value;
-    parser = peg.generate(grammar);
+//  parser = peg.generate(grammar);
     try {
         ast = parser.parse(text);
         result = "Success! " + ast2html(ast);
