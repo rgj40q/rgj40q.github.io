@@ -13,7 +13,7 @@ function ast2html(ast) {
 }
 
 function button_onclick() {
-    var parser, grammar, ast, result, error;
+    var parser, ast, result, error;
     fetch("grammar.pegjs").then(response => response.text()).then(grammar => {
         parser = peg.generate(grammar);
         try {
@@ -23,5 +23,5 @@ function button_onclick() {
             result = "Parsing error: " + error.message;
         }
         document.getElementById("result").innerHTML = result;
-    }
+    });
 }
