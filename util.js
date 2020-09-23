@@ -5,9 +5,9 @@ function button_onclick() {
         try {
             ast = parser.parse(document.getElementById("text").value);
             console.log(ast);
-            result = ast2html(ast);
+            result = "Parsed successfully: " + ast2html(ast);
         } catch(error) {
-            result = error.message;
+            result = "Parsing error: "error.message;
         }
     });
     document.getElementById("result").innerHTML = result;
