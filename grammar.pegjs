@@ -255,22 +255,22 @@ Adverb3_phrase_single
 
 Argument0
     = a:Argument0_single bs:(Argument0_conjunction Argument0_single)* {
-        return {name:"argument, level=0", children:[a].concat(bs);
+        return {name:"argument, level=0", children:[a].concat(bs)};
     }
 
 Argument1
     = a:Argument1_single bs:(Argument1_conjunction Argument1_single)* {
-        return {name:"argument, level=1", children:[a].concat(bs);
+        return {name:"argument, level=1", children:[a].concat(bs)};
     }
 
 Argument2
     = a:Argument2_single bs:(Argument2_conjunction Argument2_single)* {
-        return {name:"argument, level=2", children:[a].concat(bs);
+        return {name:"argument, level=2", children:[a].concat(bs)};
     }
 
 Argument3
     = a:Argument3_single bs:(Argument3_conjunction Argument3_single)* {
-        return {name:"argument, level=3", children:[a].concat(bs);
+        return {name:"argument, level=3", children:[a].concat(bs)};
     }
 
 Argument0_single
@@ -357,7 +357,7 @@ Gerund0_phrase
         return {name:"gerund phrase, valency=0, level=0", children:[a, b, c]};
     }
     / a:Negation? b:Gerund0_valency1 c:Argument1? d:Adverb1_phrase? {
-        return {name:"gerund phrase, valency=1, level=0", children:[a, b, c, d};
+        return {name:"gerund phrase, valency=1, level=0", children:[a, b, c, d]};
     }
     / a:Negation? b:Gerund0_valency2 c:Argument1? d:Argument1? e:Adverb1_phrase? {
         return {name:"gerund phrase, valency=2, level=0", children:[a, b, c, d, e]};
@@ -809,7 +809,11 @@ Negation = a:"ne" Whitespace {
         return {name:(a + ": negation particle"), children:[]};
     }
 
-Whitespace = [ \t\n\r][ \t\n\r]*
+Interjection = a:("vau"/"yoi"/"yei"/"yura") Whitespace {
+        return {name:(a + ": interjection"), children:[]};
+    }
+
+Whitespace = [ \t\n\r][ \t\n\r]* / !.
 
 Verb_suffix = "t"
 

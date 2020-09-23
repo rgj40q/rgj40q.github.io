@@ -25,7 +25,9 @@ function ast2html(ast) {
     var result = "<ul>";
     result += "<li>" + ast.name + "</li>";
     for (const element of ast.children) {
-        result += ast2html(element);
+        if (element) {
+            result += ast2html(element);
+        }
     }
     result += "</ul>";
     return result;
