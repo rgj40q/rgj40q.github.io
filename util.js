@@ -1,8 +1,8 @@
 function button_onclick() {
-    var response, grammar, text, result, parser, error, ast;
-    response = fetch("grammar.pegjs");
-    grammar = response.text;
+    var text, result, parser, error, ast;
     text = document.getElementById("text").value;
+//  var response = fetch("grammar.pegjs");
+//  var grammar = response.text;
 //  parser = peg.generate(grammar);
     try {
         ast = parser.parse(text);
