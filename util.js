@@ -26,6 +26,12 @@ function ast2html(ast) {
     return result;
 }
 
+function buildErrorMessage(e) {
+    return e.location !== undefined
+      ? "Line " + e.location.start.line + ", column " + e.location.start.column + ": " + e.message
+      : e.message;
+  }
+
 function button_onclick() {
     var parser, ast, result, error;
     fetch("grammar.pegjs").then(response => response.text()).then(grammar => {
@@ -34,7 +40,7 @@ function button_onclick() {
             ast = parser.parse(document.getElementById("textarea").value);
             result = "Parsed successfully: " + ast2html(ast);
         } catch(error) {
-            result = "Parsing error: " + error.message;
+            result = "Parsing error: " + buildErrorMessage(error);
         }
         document.getElementById("result").innerHTML = result;
     });
