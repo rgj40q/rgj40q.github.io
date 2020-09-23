@@ -1,15 +1,16 @@
 function button_onclick() {
-    var text, result, parser, error, ast;
-    text = document.getElementById("text").value;
-//  var response = fetch("grammar.pegjs");
-//  var grammar = response.text;
-//  parser = peg.generate(grammar);
-    try {
-        ast = parser.parse(text);
-        result = "Success! " + ast2html(ast);
-    } catch(error) {
-        result = "Parsing error: " + error;
-    }
+    var result, parser, ast;
+    fetch("grammar.pegjs").then(response => response.text()).then(grammar => {
+        parser = peg.generate(grammar);
+        document.getElementById("btn").onclick = error => {
+            try {
+                ast = parser.parse(document.getElementById("text").value);
+                result = ast2html(ast);
+            } catch(error) {
+                result = error.message;
+            }
+        };
+    });
     document.getElementById("result").innerHTML = result;
 }
 
