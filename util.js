@@ -1,15 +1,13 @@
 function button_onclick() {
-    var result, parser, ast;
+    var result, parser, ast, error;
     fetch("grammar.pegjs").then(response => response.text()).then(grammar => {
         parser = peg.generate(grammar);
-        document.getElementById("btn").onclick = error => {
-            try {
-                ast = parser.parse(document.getElementById("text").value);
-                result = ast2html(ast);
-            } catch(error) {
-                result = error.message;
-            }
-        };
+        try {
+            ast = parser.parse(document.getElementById("text").value);
+            result = ast2html(ast);
+        } catch(error) {
+            result = error.message;
+        }
     });
     document.getElementById("result").innerHTML = result;
 }
