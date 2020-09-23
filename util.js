@@ -17,7 +17,7 @@ function button_onclick() {
     fetch("grammar.pegjs").then(response => response.text()).then(grammar => {
         parser = peg.generate(grammar);
         try {
-            ast = parser.parse(document.getElementById("text").value);
+            ast = parser.parse(document.getElementById("textarea").value);
             result = "Parsed successfully: " + ast2html(ast);
         } catch(error) {
             result = "Parsing error: " + error.message;
