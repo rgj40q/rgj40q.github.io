@@ -12,11 +12,14 @@ ul {
     list-style-type: none;
     padding-left: 1em;
 }
-#textarea{
-    width: 50%;
-}
 table, th, td {
-  border: 1px solid black;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align:center;
+}
+.column {
+    float: left;
+    width: 50%;
 }
 </style>
 </head>
@@ -24,20 +27,22 @@ table, th, td {
 <p>This page is about the conlang 'Prominent Potato' (PP).
 <h2>I. Phonology and orthography</h2>
 <p>Letters include a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, x, z. Capital letters are not used.
-<p>Letters are pronounced as in IPA except: c /ʃ/, j /ʒ/, and h /ɣ/. NB: x /x/.
+<p>Letters are pronounced as in IPA except: c /ʃ/, j /ʒ/, and h /ɣ/.
 <p>Consonants include m, n, r, l, b, d, g, p, t, k, v, z, j, h, f, s, c, x.
 <p>Vowels include:
 <ul style="list-style-type:disc">
 <li>monophthongs i, u, e, o, a;
 <li>rising diphthongs iu, ie, ue, io, uo, ia, ua;
 <li>falling diphthongs ui, ei, eu, oi, ou, ai, au.</ul>
-<p>Syllable structure is CV in stem, and CV(C) in ending.
-<p>Borrowed words and personal names that do not fit in these rules must be adapted with either throwing away offending sounds, or inserting additional sounds to break up clusters. The default choice is 'h /ɣ/' for hiatus and 'e' for consonant clusters.
+<p>Syllable structure is CV in stem, and CV(C) in part-of-speech suffix.
+<p>Borrowed words and personal names that do not fit in these rules must be adapted by either throwing away offending sounds, or by inserting additional sounds to break up clusters. The default choices are 'h' for hiatus and 'e' for consonant clusters.
 <p>PP is a syllable-timed language. The weak accent is on the first syllable. There is little to no vowel reduction. Intonation is used for emphasis.
 <h2>II. Morphology</h2>
-<p>Every productive (open-class) stem has a <i>valency</i> (how many direct objects it may take including the subject) and in some cases a <i>shift</i> (whether the order of direct objects moved and how much).
-<p>The last vowel of the stem determines stem valency and shift:
-<table style="text-align:center;width:50%">
+<p>A word belongs to either open or closed class. Open classes are nouns, verbs, appositions, adverbs and gerunds.
+<p>An open class word consists of a stem and a part of speech suffix. Other suffixes if any belong to the stem. 
+<p>A stem has a <i>valency</i> (how many direct objects a verb of that stem can take including the subject) and in some cases a <i>shift</i> (whether the order of direct objects moved and how much).
+<p>The last stem vowel marks the stem valence and its shift:
+<table style="text-align:center;width:30%">
 <tr><th>valence \ shift<th>0<th>1<th>2<th>3
 <tr><th>0<td>-o<td><td><td>
 <tr><th>1<td>-a<td><td><td>
@@ -45,14 +50,28 @@ table, th, td {
 <tr><th>3<td>-u<td>-ua<td>-ui<td>
 <tr><th>4<td>-e<td>-ie<td>-ei<td>-eu
 </table>
-<p>Unlike in Lojban, the argument places do not swap, but instead they move to the left in cirle. E.g. one step of shift means that the 1st argument becomes the last, 2nd -> 1st, 3rd -> 2nd etc.
-<p>Stems of valency 0 may be verbs and gerunds. Stems of valencies 1-4 may be all other open-class parts of speech: verb, gerund, noun, apposition, and adverb.
+<p>Unlike in Lojban, the argument places do not swap, but instead they move to the left in circle. E.g. one step of shift means that the 1st argument becomes the last, 2nd -> 1st, 3rd -> 2nd, and 4th -> 3rd.
+<p>A word with the stem of valency 0 may be verb or gerund. A word with the stem of valencies 1-4 may be verb, gerund, noun, apposition, or adverb.
+<p>Part-of-speech suffixes:
+<table style="width:30%">
+<tr><th>part of speech \ level<th>0<th>1<th>2<th>3
+<tr><th>gerund<td>-r<td>-ra<td>-ri<td>-ru
+<tr><th>noun<td>-n<td>-na<td>-ni<td>-nu
+<tr><th>apposition<td>-l<td>-la<td>-li<td>-lu
+<tr><th>adverb<td>-m<td>-ma<td>-mi<td>-mu
+<tr><th>verb<td>-t<td><td><td>
+</table>
+<p><i>Level</i> marks the position of a word in a sentence, the further away from the verb, the higher the level. It is discussed in detail in III. Syntax.
+<p>Words may
+<h3>Numbers</h3>
+<p>...
 <h2>III. Syntax</h2>
 <p>...
 <p>Parser:</p>
-<textarea id="textarea" rows="5">hoi ta tamaisuanan kit man gadaval</textarea>
-<br/>
 <button onclick=button_onclick()>parse</button>
-<div id="result"></div>
+<div class="row">
+<div class="column"><textarea id="textarea" rows="30" cols="100">hoi ta tamaisuanan kit man gadaval</textarea></div>
+<div class="column"><div id="result"></div></div>
+</div> 
 </body>
 </html>
