@@ -16,7 +16,6 @@ ul {
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
-    text-align:center;
 }
 .column {
     float: left;
@@ -27,10 +26,11 @@ table, th, td {
 <body>
 <p>This page is about the conlang 'Prominent Potato' (PP).</p>
 <h2>I. Phonology and orthography</h2>
-<p>Letters include a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p,
-r, s, t, u, v, x, z. Capital letters are not used.</p>
-<p>Letters are pronounced as in IPA except: c /ʃ/, j /ʒ/, and h
-/ɣ/.</p>
+<p>Letters include a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q,
+r, s, t, u, v, w, x, y, z. Capital letters are not used.</p>
+<p>Letters are pronounced as in IPA except: q /ŋ/, w /ð/, c /θ/, j /ʒ/, h /ʃ/, and y /ɣ/.
+Some variation in the pronunciation of phonemes is allowed as long as the phonemic difference is preserved. E.g.
+/r/ may sound as [ɹ]; /x/ may sound as [h]; /ɣ/ may sound as [ʀ] or [ʁ].
 <p>Consonants include m, n, r, l, b, d, g, p, t, k, v, z, j, h, f,
 s, c, x.</p>
 <p>Vowels include:</p>
@@ -53,61 +53,42 @@ for emphasis.</p>
 nouns, verbs, appositions, adverbs and gerunds.</p>
 <p>An open class word consists of a stem and a part of speech
 suffix. Other suffixes if any belong to the stem.</p>
-<p>A stem has a <i>valency</i> (how many direct objects a verb of
-that stem can take including the subject) and in some cases a
-<i>shift</i> (whether the order of direct objects moved and how
-much).</p>
-<p>The last stem vowel marks the stem valence and its shift:</p>
+<p>A stem has a <i>valency</i> -- how many direct objects a verb of
+that stem can take including the subject.</p>
+<p>The last stem vowel marks the stem valence:</p>
 <table>
 <tr>
-<th>valence \ shift</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
+<th>valence</th>
+<th>last vowel</th>
 </tr>
 <tr>
-<th>0</th>
+<td>0</td>
 <td>-o</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr>
-<th>1</th>
+<td>1</td>
 <td>-a</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr>
-<th>2</th>
+<td>2</td>
 <td>-i</td>
-<td>-ia</td>
-<td></td>
-<td></td>
 </tr>
 <tr>
-<th>3</th>
+<td>3</td>
 <td>-u</td>
-<td>-ua</td>
-<td>-ui</td>
-<td></td>
 </tr>
 <tr>
-<th>4</th>
+<td>4</td>
 <td>-e</td>
-<td>-ie</td>
-<td>-ei</td>
-<td>-eu</td>
 </tr>
 </table>
-<p>Unlike in Lojban, the argument places do not swap, but instead
-they move to the left in circle. E.g. one step of shift means that
-the 1st argument becomes the last, 2nd -&gt; 1st, 3rd -&gt; 2nd,
+<p>In order to switch argument places one may use the prefixes na-,
+ni-, and nu-. They shift arguments to the left 1, 2, and 3 times
+respectifully in circle. E.g. one step of shift for valency of 4 means
+that the 1st argument becomes the last, 2nd -&gt; 1st, 3rd -&gt; 2nd,
 and 4th -&gt; 3rd.</p>
-<p>A word with the stem of valency 0 may be verb or gerund. A word
-with the stem of valencies 1-4 may be verb, gerund, noun,
+<p>A word with the stem of valency of 0 may be verb or gerund. A word
+with the stem of valencies of 1-4 may be verb, gerund, noun,
 apposition, or adverb.</p>
 <p>Part-of-speech suffixes:</p>
 <table>
@@ -169,7 +150,7 @@ speech are:</p>
 <p>In the dictionary, words are given in verb form, and this is the
 default. Words belonging to only one class in English are changed
 as follows: 'apple' -&gt; 'to be an apple', 'beautiful' -&gt; 'to
-be beautiful', 'very' -&gt; 'to be extreme'.</p>
+be beautiful', 'very' -&gt; 'to be extreme', 'in'-&gt; 'to be in'.</p>
 <p>The difference between a noun and an apposition is that the
 apposition is a secondary noun describing the same thing as a main
 noun. It is
@@ -180,7 +161,9 @@ apposition if he is generally a handy person, and at the same time
 a farmer.</p>
 <p>Numerals are positional, i.e. you pronounce each digit and symbol
 in one word. For convenience there are words for 3, 6, 9 zeros and
-so on. Digits are:</p>
+so on. The syllable 'ca' in the end of a stem is reserved for numerals.
+So if a stem ends in 'ca' it must be interpreted as numeral.</p>
+<p>Digits are:</p>
 <table>
 <tr>
 <th>syllable</th>
@@ -271,34 +254,35 @@ so on. Digits are:</p>
 <td>decimal comma or point</td>
 </tr>
 <tr>
-<td>ci</td>
+<td>na</td>
 <td>unary minus</td>
 </tr>
 </table>
-<p>Every numeral ends in one of the following syllables:</p>
+<p>A numeral stem ends in one of the following suffixes:</p>
 <table>
 <tr>
-<th>syllable</th>
+<th>suffix</th>
 <th>meaning</th>
 </tr>
 <tr>
-<td>na</td>
+<td>ca</td>
 <td>nominal number, e.g. number one, number two</td>
 </tr>
 <tr>
-<td>da</td>
-<td>cardinal number, e.g. one apple, two apples</td>
+<td>duca</td>
+<td>cardinal number, e.g. one apple, one time</td>
 </tr>
 <tr>
-<td>ba</td>
+<td>bica</td>
 <td>ordinal number, e.g. first, second</td>
 </tr>
 <tr>
-<td>ja</td>
+<td>gaca</td>
 <td>multiplier, e.g. single / one by one, double / in pairs</td>
 </tr>
 </table>
-<p>So the numeral stem has valency of 1.</p>
+<p>So the numeral stem has valency of 1. E.g. nitucan - a number 12,
+saraducat - is in quantity of 63, ninibical - 11th.</p>
 <h2>III. Syntax</h2>
 <p>The sentence may consist of a verb phrase with or without
 arguments, of just one argument, or of an interjection. There must
@@ -398,7 +382,7 @@ are:</p>
 </tr>
 </table>
 <p>Parser:</p>
-<button onclick="button_onclick()">parse</button>
+<button onclick="buttonOnclick()">parse</button>
 <div class="row">
 <div class="column">
 <textarea id="textarea" rows="30" cols=

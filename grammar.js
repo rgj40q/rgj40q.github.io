@@ -847,7 +847,7 @@ Stem4 = a:Consonant bs:Syllable* c:("ie"/"ei"/"eu"/"e") { return [a].concat(bs).
 
 Syllable = !(Vowel [rnlmt] Vowel? Whitespace) a:Vowel b:Consonant { return a + b; }
 
-Consonant = [mnrlbdgptkvzjhfscx]
+Consonant = [mnqrlbdgptkvwzjyfcshx]
 
 Vowel = "ui"/"iu"/"ei"/"eu"/"ie"/"ie"/"oi"/"ou"/"io"/"uo"/"ai"/"au"/"ia"/"ua"/"i"/"u"/"e"/"o"/"a"
 

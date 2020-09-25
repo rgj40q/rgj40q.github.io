@@ -32,7 +32,7 @@ function buildErrorMessage(e) {
         : e.message
 }
 
-function button_onclick() {
+function buttonOnclick() {
     var parser, ast, result, error
     parser = peg.generate(grammar)
     try {
