@@ -9,22 +9,23 @@
 <script src="dict.js" type="text/javascript"></script>
 <script src="util.js" type="text/javascript"></script>
 <style>
-ul {
-    list-style-type: none;
-    padding-left: 1em;
-}
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
-}
-.column {
-    float: left;
-    width: 50%;
+    padding: 5px;
 }
 </style>
 </head>
-<body>
-<p>This page is about the conlang 'Prominent Potato' (PP).</p>
+<body style="width:800px">
+<p>This page is about the conlang 'Prominent Potato' (PP). This is
+for my personal entertainment.
+<p>The language is as regular as possible. It has little grammar,
+e.g. no grammatical gender, no singular-plural distinction for nouns,
+no person, voice, tense, aspect for verbs...
+All of these is in the domain of word derivation, which I also try
+to make regular.
+<p>Some call such conlangs loglangs, or engelangs. The influence of
+Lojban is obvious, but no successiveness.
 <h2>I. Phonology and orthography</h2>
 <p>Letters include a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q,
 r, s, t, u, v, w, x, y, z. Capital letters are not used.</p>
@@ -33,18 +34,19 @@ Some variation in the pronunciation of phonemes is allowed as long as the phonem
 /r/ may sound as [ɹ]; /x/ may sound as [h]; /ɣ/ may sound as [ʀ] or [ʁ].
 <p>Consonants include m, n, r, l, b, d, g, p, t, k, v, z, j, h, f,
 s, c, x.</p>
-<p>Vowels include:</p>
-<ul style="list-style-type:disc">
+<p>Vowels are pronounced as in Spanish. They include:</p>
+<ul>
 <li>monophthongs i, u, e, o, a;</li>
 <li>rising diphthongs iu, ie, ue, io, uo, ia, ua;</li>
 <li>falling diphthongs ui, ei, eu, oi, ou, ai, au.</li>
 </ul>
-<p>Syllable structure is CV in stem, and CV(C) in part-of-speech
-suffix.</p>
+<p>Syllable structure is CV in the first and middle syllables, and
+CV(N) in the last syllable of a word where N is one of
+m, n, ŋ, r, l.</p>
 <p>Borrowed words and personal names that do not fit in these rules
 must be adapted by either throwing away offending sounds, or by
 inserting additional sounds to break up clusters. The default
-choices are 'h' for hiatus and 'e' for consonant clusters.</p>
+choices are 'ɣ' for hiatus and 'e' for consonant clusters.</p>
 <p>PP is a syllable-timed language. The weak accent is on the first
 syllable. There is little to no vowel reduction. Intonation is used
 for emphasis.</p>
@@ -53,8 +55,10 @@ for emphasis.</p>
 nouns, verbs, appositions, adverbs and gerunds.</p>
 <p>An open class word consists of a stem and a part of speech
 suffix. Other suffixes if any belong to the stem.</p>
-<p>A stem has a <i>valency</i> -- how many direct objects a verb of
-that stem can take including the subject.</p>
+<p>A stem has a <i>valency</i> -- how many arguments a verb of
+that stem can take. Arguments include subject, direct and indirect
+objects, which are defined in the dictionary and are supposed to be
+necessary by meaning.</p>
 <p>The last stem vowel marks the stem valence:</p>
 <table>
 <tr>
@@ -83,13 +87,14 @@ that stem can take including the subject.</p>
 </tr>
 </table>
 <p>In order to switch argument places one may use the prefixes na-,
-ni-, and nu-. They shift the arguments to the left 1, 2 and 3 times, respectively, in a circle. E.g. one step of shift for valency of 4 means
+ni-, and nu-. They shift the arguments to the left 1, 2 and 3 times,
+respectively, in a circle. E.g. one step of shift for valency of 4 means
 that the 1st argument becomes the last, 2nd -&gt; 1st, 3rd -&gt; 2nd,
 and 4th -&gt; 3rd.</p>
 <p>A word with the stem of valency of 0 may be verb or gerund. A word
 with the stem of valencies of 1-4 may be verb, gerund, noun,
 apposition, or adverb.</p>
-<p>Part-of-speech suffixes:</p>
+<p>Part of speech suffixes:</p>
 <table>
 <tr>
 <th>part of speech \ level</th>
@@ -100,10 +105,10 @@ apposition, or adverb.</p>
 </tr>
 <tr>
 <th>gerund</th>
-<td>-r</td>
-<td>-ra</td>
-<td>-ri</td>
-<td>-ru</td>
+<td>-q</td>
+<td>-qa</td>
+<td>-qi</td>
+<td>-qu</td>
 </tr>
 <tr>
 <th>noun</th>
@@ -128,23 +133,23 @@ apposition, or adverb.</p>
 </tr>
 <tr>
 <th>verb</th>
-<td>-t</td>
+<td>-r</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 </table>
 <p><i>Level</i> marks the position of a word in a sentence, the
-further away from the verb, the higher the level. It is discussed
-in detail in III. Syntax.</p>
+further away from the verb, the higher the level. It is explained
+in III. Syntax.</p>
 <p>Words can freely change from one open class to another. If
 derived from verb 'someone does it', the meaning of other parts of
 speech are:</p>
-<ul style="list-style-type:disc">
+<ul>
 <li>Noun: the one who does it</li>
 <li>Apposition: the one who does it</li>
 <li>Gerund: the process or action of doing it; to do it</li>
-<li>Adverb: in a way or manner someone does it</li>
+<li>Adverb: in a way or manner of doing it; 'doingly' it</li>
 </ul>
 <p>In the dictionary, words are given in verb form, and this is the
 default. Words belonging to only one class in English are changed
@@ -281,7 +286,7 @@ So if a stem ends in 'ca' it must be interpreted as numeral.</p>
 </tr>
 </table>
 <p>So the numeral stem has valency of 1. E.g. nitucan - a number 12,
-saraducat - is in quantity of 63, ninibical - 11th.</p>
+saraducar - is in quantity of 63, ninibical - 11th.</p>
 <h2>III. Syntax</h2>
 <p>The sentence may consist of a verb phrase with or without
 arguments, of just one argument, or of an interjection. There must
@@ -306,15 +311,15 @@ appositions in a row. Conjunctions are not used with appositions.</p>
 are one level below the main word. If a word is of level 3, it may
 not have dependent words.</p>
 <p>All words of valency 2+ and gerunds of valency 1+ may have
-arguments just like a verb. E.g. 'to be the brother of me' -&gt; 'a
-brother of me', where <i>me</i> comes without preposition as a
+arguments just like a verb. E.g. 'to be a friend of mine' -&gt;
+'a friend me', where <i>me</i> comes without preposition as a
 direct object of noun.</p>
 <p>All arguments are optional. If one is skipped, it is the last,
 if two, they are the two last etc. To skip the first argument while
 keeping others, one may use the stem shift.</p>
 <p>Adverbs have comparative and superlative forms. Comparative
-phrase: mo ADV ce SENT le - more X than Z [subsentence terminator].
-Superlative phrase: nai ADV - the most X.</p>
+phrase: mo ADV ce SENT le -- more X than Z [subsentence terminator].
+Superlative phrase: nai ADV -- the most X.</p>
 <p>Sentences, argument phrases, and adverb phrases of different
 levels use different conjunctions to enumerate things. They
 are:</p>
@@ -327,9 +332,9 @@ are:</p>
 </tr>
 <tr>
 <th>sentence</th>
-<td>ta</td>
-<td>ti</td>
-<td>tu</td>
+<td>ra</td>
+<td>ri</td>
+<td>ru</td>
 </tr>
 <tr>
 <th>adverb level=0</th>
@@ -357,38 +362,34 @@ are:</p>
 </tr>
 <tr>
 <th>argument level=0</th>
-<td>ra</td>
-<td>ri</td>
-<td>ru</td>
+<td>na</td>
+<td>ni</td>
+<td>nu</td>
 </tr>
 <tr>
 <th>argument level=1</th>
-<td>reu</td>
-<td>ria</td>
-<td>rua</td>
+<td>neu</td>
+<td>nia</td>
+<td>nua</td>
 </tr>
 <tr>
 <th>argument level=2</th>
-<td>rai</td>
-<td>rie</td>
-<td>rui</td>
+<td>nai</td>
+<td>nie</td>
+<td>nui</td>
 </tr>
 <tr>
 <th>argument level=3</th>
-<td>rau</td>
-<td>riu</td>
-<td>ruo</td>
+<td>nau</td>
+<td>niu</td>
+<td>nuo</td>
 </tr>
 </table>
 <p>Parser:</p>
-<button onclick="buttonOnclick()">parse</button>
-<div class="row">
-<div class="column">
-<textarea id="textarea" rows="30" cols=
-"100">hoi ta tamaisuanan kit man gadaval</textarea></div>
-<div class="column">
-<div id="result"></div>
-</div>
-</div>
+<button onclick="buttonOnclick()">parse</button><br/>
+<textarea id="textarea">yei ra tamaisuanan kir man gadaval
+</textarea>
+<p>
+<div id="result"><br/><br/><br/><br/></div>
 </body>
 </html>

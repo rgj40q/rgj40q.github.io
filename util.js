@@ -1,3 +1,5 @@
+
+
 function ast2html(ast) {
     var result = ""
     if (Array.isArray(ast)) {
@@ -10,7 +12,7 @@ function ast2html(ast) {
         }
     } else {
         if (ast.name) {
-            result += "<ul><li>" + ast.name + "</li>"
+            result += '<ul style="list-style-type:none;padding-left:1em"><li>' + ast.name + "</li>"
         }
         if (ast.children) {
             for (const element of ast.children) {
@@ -26,11 +28,13 @@ function ast2html(ast) {
     return result
 }
 
+
 function buildErrorMessage(e) {
     return e.location !== undefined
         ? "line " + e.location.start.line + ", column " + e.location.start.column + ": " + e.message
         : e.message
 }
+
 
 function buttonOnclick() {
     var parser, ast, result, error
@@ -43,3 +47,9 @@ function buttonOnclick() {
     }
     document.getElementById("result").innerHTML = result
 }
+
+
+function parseStem(s) {
+    return dict.get(s);
+}
+
