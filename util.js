@@ -1,28 +1,30 @@
 
 
 function ast2html(ast) {
-    var result = ""
-    if (Array.isArray(ast)) {
+    var result = ''
+    var i
+    if (Object.prototype.toString.call(ast) === '[object Array]') {
         if (ast) {
-            for (const element of ast) {
-                if (element) {
-                    result += ast2html(element)
+            for (i = 0; i < ast.length; i++) {
+                if (ast[i]) {
+                    result += ast2html(ast[i])
                 }
             }
         }
     } else {
         if (ast.name) {
-            result += '<ul style="list-style-type:none;padding-left:1em"><li>' + ast.name + "</li>"
+            result += '<ul style="list-style-type:none;'
+                + 'padding-left:1em"><li>' + ast.name + '</li>'
         }
         if (ast.children) {
-            for (const element of ast.children) {
-                if (element) {
-                    result += ast2html(element)
+            for (i = 0; i < ast.children.length; i++) {
+                if (ast.children[i]) {
+                    result += ast2html(ast.children[i])
                 }
             }
         }
         if (ast.name) {
-            result += "</ul>"
+            result += '</ul>'
         }
     }
     return result
@@ -30,26 +32,36 @@ function ast2html(ast) {
 
 
 function buildErrorMessage(e) {
-    return e.location !== undefined
-        ? "line " + e.location.start.line + ", column " + e.location.start.column + ": " + e.message
-        : e.message
+    if (e.location !== undefined) {
+        return 'line ' + e.location.start.line + ', column '
+            + e.location.start.column + ': ' + e.message
+    }
+    // else
+    return e.message
 }
 
 
 function buttonOnclick() {
     var parser, ast, result, error
-    parser = peg.generate(grammar)
+    parser = peg.generate(document.getElementById('grammar').innerHTML)
     try {
-        ast = parser.parse(document.getElementById("textarea").value)
-        result = "Parsed successfully: " + ast2html(ast)
+        ast = parser.parse(document.getElementById('textarea').value)
+        result = 'Parsed successfully: ' + ast2html(ast)
     } catch(error) {
-        result = "Parsing error: " + buildErrorMessage(error)
+        result = 'Parsing error: ' + buildErrorMessage(error)
     }
-    document.getElementById("result").innerHTML = result
+    document.getElementById('result').innerHTML = result
 }
 
 
 function parseStem(s) {
-    return dict.get(s);
+    var i
+    for (i = 0; i < dict.length; i++) {
+        if (s == dict[i][0]) {
+            return dict[i][2] + ', ' + 'ULD#' + dict[i][1]
+            break
+        }
+    }
+    return '-'
 }
 
