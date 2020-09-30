@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -765,43 +763,43 @@ Apposition3_valency4 = a:Stem4 b:Apposition_suffix c:Level3_suffix Whitespace {
         return {name:("<b>" + a + b + c + "</b>: apposition, valency=4, level=3, definition: " + parseStem(a)), children:[]};
     }
 
-Adverb0_conjunction = a:("ma" / "mi" / "mu") Whitespace {
+Adverb0_conjunction = a:("ɣam" / "ɣim" / "ɣum") Whitespace {
         return {name:("<b>" + a + "</b>: adverb conjunction, level=0, definition: " + parseStem(a)), children:[]};
     }
 
-Adverb1_conjunction = a:("meu" / "mia" / "mua") Whitespace {
+Adverb1_conjunction = a:("ɣama" / "ɣima" / "ɣuma") Whitespace {
         return {name:("<b>" + a + "</b>: adverb conjunction, level=1, definition: " + parseStem(a)), children:[]};
     }
 
-Adverb2_conjunction = a:("mai" / "mie" / "mui") Whitespace {
+Adverb2_conjunction = a:("ɣami" / "ɣimi" / "ɣumi") Whitespace {
         return {name:("<b>" + a + "</b>: adverb conjunction, level=2, definition: " + parseStem(a)), children:[]};
     }
 
-Adverb3_conjunction = a:("mau" / "miu" / "muo") Whitespace {
+Adverb3_conjunction = a:("ɣamu" / "ɣimu" / "ɣumu") Whitespace {
         return {name:("<b>" + a + "</b>: adverb conjunction, level=3, definition: " + parseStem(a)), children:[]};
     }
 
-Argument0_conjunction = a:("na" / "ni" / "nu") Whitespace {
+Argument0_conjunction = a:("ɣan" / "ɣin" / "ɣun") Whitespace {
         return {name:("<b>" + a + "</b>: argument conjunction, level=0, definition: " + parseStem(a)), children:[]};
     }
 
-Argument1_conjunction = a:("neu" / "nia" / "nua") Whitespace {
+Argument1_conjunction = a:("ɣana" / "ɣina" / "ɣuna") Whitespace {
         return {name:("<b>" + a + "</b>: argument conjunction, level=1, definition: " + parseStem(a)), children:[]};
     }
 
-Argument2_conjunction = a:("nai" / "nie" / "nui") Whitespace {
+Argument2_conjunction = a:("ɣani" / "ɣini" / "ɣuni") Whitespace {
         return {name:("<b>" + a + "</b>: argument conjunction, level=2, definition: " + parseStem(a)), children:[]};
     }
 
-Argument3_conjunction = a:("nau" / "niu" / "nuo") Whitespace {
+Argument3_conjunction = a:("ɣanu" / "ɣinu" / "ɣunu") Whitespace {
         return {name:("<b>" + a + "</b>: argument conjunction, level=3, definition: " + parseStem(a)), children:[]};
     }
 
-Sentence_conjunction = a:("ra" / "ri" / "ru") Whitespace {
+Sentence_conjunction = a:("ɣar" / "ɣir" / "ɣur") Whitespace {
         return {name:("<b>" + a + "</b>: sentence conjunction"), children:[]};
     }
 
-Comparative_conjunction = a:"ce" Whitespace {
+Comparative_conjunction = a:"ke" Whitespace {
         return {name:("<b>" + a + "</b>: comparative conjunction"), children:[]};
     }
 
@@ -821,7 +819,7 @@ Negation = a:"ne" Whitespace {
         return {name:("<b>" + a + "</b>: negation particle"), children:[]};
     }
 
-Interjection = a:("vau"/"yoi"/"yei"/"yura") Whitespace {
+Interjection = a:("vaw"/"ɣoj"/"ɣej"/"ɣura") Whitespace {
         return {name:("<b>" + a + "</b>: interjection"), children:[]};
     }
 
@@ -829,7 +827,7 @@ Whitespace = !. / [ \t\n\r]+
 
 Verb_suffix = "r"
 
-Gerund_suffix = "q"
+Gerund_suffix = "ŋ"
 
 Noun_suffix = "n"
 
@@ -853,15 +851,15 @@ Stem1 = a:Consonant bs:Syllable* c:"a" {
     return [a].concat(bs).concat(c).join("")
 }
 
-Stem2 = a:Consonant bs:Syllable* c:("ia"/"i") {
+Stem2 = a:Consonant bs:Syllable* c:"i" {
     return [a].concat(bs).concat(c).join("")
 }
 
-Stem3 = a:Consonant bs:Syllable* c:("ua"/"ui"/"u") {
+Stem3 = a:Consonant bs:Syllable* c:"u" {
     return [a].concat(bs).concat(c).join("")
 }
 
-Stem4 = a:Consonant bs:Syllable* c:("ie"/"ei"/"eu"/"e") {
+Stem4 = a:Consonant bs:Syllable* c:"e" {
     return [a].concat(bs).concat(c).join("")
 }
 
@@ -869,10 +867,10 @@ Syllable = !(Vowel [mnqrl] Vowel? Whitespace) a:Vowel b:Consonant {
     return a + b
 }
 
-Consonant = [mnqrlbdgptkvwzjyfcshx]
+Consonant = [mnŋbdgptkvðzʒɣfθsʃxrl]
 
-Vowel = "ui"/"iu"/"ei"/"eu"/"ie"/"ie"/"oi"/"ou"/"io"/"uo"/"ai"/"au"
-    /"ia"/"ua"/"i"/"u"/"e"/"o"/"a"
+Vowel = "uj"/"ju"/"ej"/"ew"/"je"/"we"/"oj"/"ow"/"jo"/"wo"/"aj"/"aw"
+    /"ja"/"wa"/"i"/"u"/"e"/"o"/"a"
 
 // -->
 
@@ -889,40 +887,42 @@ table, th, td {
 </style>
 </head>
 <body style="width:800px">
-<p>This page is about the conlang 'Prominent Potato' (PP). This is my
-personal entertainment.
-<p>The aim of the language is to be as regular in grammar as possible.
-This is achieved by removing semantics from the grammar so that the
-grammar becomes just syntax, and by formalizing the syntax.
-This however does not make grammar minimal or poor,
-instead there are grammatical features that are either not widespread
-in natural languages or not used systematically.
+<p>This page is about the conlang 'Prominent Potato' (PP). This is
+my personal entertainment.</p>
+<p>The aim of the language is to be as regular in grammar as
+possible. This is achieved by removing semantics from the grammar
+so that the grammar becomes just syntax, and by formalizing the
+syntax. This however does not make grammar minimal or poor, instead
+there are grammatical features that are either not widespread in
+natural languages or not used systematically.</p>
 <p>For example there is no grammatical gender, no singular-plural
-distinction for nouns, no person, voice, tense, aspect for verbs. All this belongs
-to the field of word formation, and therefore semantics, which is
-deliberately irregular.
-<p>In turn, there is mandatory and explicit valency classification of
-roots and suffixes, and level classification of conjunctions, nouns,
-and adverbs. And so on.
+distinction for nouns, no person, voice, tense, aspect for verbs.
+All this belongs to the field of word formation, and therefore
+semantics, which is deliberately irregular.</p>
+<p>In turn, there is mandatory and explicit valency classification
+of roots and suffixes, and level classification of conjunctions,
+nouns, and adverbs. And so on.</p>
 <p>Some call such projects loglangs, or engelangs. The influence of
-Lojban is obvious, but no successiveness and no copying.
+Lojban is obvious, but no successiveness and no copying.</p>
 <h2>I. Phonology and orthography</h2>
-<p>Letters include a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q,
-r, s, t, u, v, w, x, y, z. Capital letters are not used.</p>
-<p>Letters are pronounced as in IPA except: q /ŋ/, w /ð/, c /θ/, j /ʒ/, h /ʃ/, and y /ɣ/.
-Some variation in the pronunciation of phonemes is allowed as long as the phonemic difference is preserved. E.g.
-/r/ may sound as [ɹ]; /x/ may sound as [h]; /ɣ/ may sound as [ʀ] or [ʁ].
-<p>Consonants include m, n, r, l, b, d, g, p, t, k, v, z, j, h, f,
-s, c, x.</p>
+<p>Letters include a, b, d, e, f, g, i, j, k, l, m, n, o, p, r, s,
+t, u, v, w, x, z, ŋ, ð, ʒ, ɣ, θ, ʃ. Capital letters are not
+used.</p>
+<p>Letters are pronounced as in IPA. Some variation in the
+pronunciation of phonemes is allowed as long as the phonemic
+difference is preserved. E.g. /r/ may sound as [ɹ]; /x/ may sound
+as [h]; /ɣ/ may sound as [ʀ] or [ʁ].</p>
+<p>Syllable structure is CV in the first and middle syllables, and
+CV(N) in the last syllable of a word where N is one of m, n, ŋ, r,
+l.</p>
+<p>Consonants include b, d, f, g, k, l, m, n, p, r, s, t, v, x, z,
+ŋ, ð, ʒ, ɣ, θ, ʃ.</p>
 <p>Vowels are pronounced as in Spanish. They include:</p>
 <ul>
 <li>monophthongs i, u, e, o, a;</li>
-<li>rising diphthongs iu, ie, ue, io, uo, ia, ua;</li>
-<li>falling diphthongs ui, ei, eu, oi, ou, ai, au.</li>
+<li>rising diphthongs ju, je, we, jo, wo, ja, wa;</li>
+<li>falling diphthongs uj, ej, ew, oj, ow, aj, aw.</li>
 </ul>
-<p>Syllable structure is CV in the first and middle syllables, and
-CV(N) in the last syllable of a word where N is one of
-m, n, ŋ, r, l.</p>
 <p>Borrowed words and personal names that do not fit in these rules
 must be adapted by either throwing away offending sounds, or by
 inserting additional sounds to break up clusters. The default
@@ -935,8 +935,8 @@ for emphasis.</p>
 nouns, verbs, appositions, adverbs and gerunds.</p>
 <p>An open class word consists of a stem and a part of speech
 suffix. Other suffixes if any belong to the stem.</p>
-<p>A stem has a <i>valency</i> -- how many arguments a verb of
-that stem can take. Arguments include subject, direct and indirect
+<p>A stem has a <i>valency</i> -- how many arguments a verb of that
+stem can take. Arguments include subject, direct and indirect
 objects, which are defined in the dictionary and are supposed to be
 necessary by meaning.</p>
 <p>The last stem vowel marks the stem valence:</p>
@@ -967,12 +967,12 @@ necessary by meaning.</p>
 </tr>
 </table>
 <p>In order to switch argument places one may use the prefixes na-,
-ni-, and nu-. They shift the arguments to the left 1, 2 and 3 times,
-respectively, in a circle. E.g. one step of shift for valency of 4 means
-that the 1st argument becomes the last, 2nd -&gt; 1st, 3rd -&gt; 2nd,
-and 4th -&gt; 3rd.</p>
-<p>A word with the stem of valency of 0 may be verb or gerund. A word
-with the stem of valencies of 1-4 may be verb, gerund, noun,
+ni-, and nu-. They shift the arguments to the left 1, 2 and 3
+times, respectively, in a circle. E.g. one step of shift for
+valency of 4 means that the 1st argument becomes the last, 2nd
+-&gt; 1st, 3rd -&gt; 2nd, and 4th -&gt; 3rd.</p>
+<p>A word with the stem of valency of 0 may be verb or gerund. A
+word with the stem of valencies of 1-4 may be verb, gerund, noun,
 apposition, or adverb.</p>
 <p>Part of speech suffixes:</p>
 <table>
@@ -985,10 +985,10 @@ apposition, or adverb.</p>
 </tr>
 <tr>
 <th>gerund</th>
-<td>-q</td>
-<td>-qa</td>
-<td>-qi</td>
-<td>-qu</td>
+<td>-ŋ</td>
+<td>-ŋa</td>
+<td>-ŋi</td>
+<td>-ŋu</td>
 </tr>
 <tr>
 <th>noun</th>
@@ -1034,19 +1034,20 @@ speech are:</p>
 <p>In the dictionary, words are given in verb form, and this is the
 default. Words belonging to only one class in English are changed
 as follows: 'apple' -&gt; 'to be an apple', 'beautiful' -&gt; 'to
-be beautiful', 'very' -&gt; 'to be extreme', 'in'-&gt; 'to be in'.</p>
+be beautiful', 'very' -&gt; 'to be extreme', 'in'-&gt; 'to be
+in'.</p>
 <p>The difference between a noun and an apposition is that the
 apposition is a secondary noun describing the same thing as a main
-noun. It is
-similar to an adjective in English and is often translated as an
-adjective, but not always, e.g. 'He is <i>handy</i> farmer' is
-translated as an adverb if he is skilled in farming, and as an
-apposition if he is generally a handy person, and at the same time
-a farmer.</p>
-<p>Numerals are positional, i.e. you pronounce each digit and symbol
-in one word. For convenience there are words for 3, 6, 9 zeros and
-so on. The syllable 'ca' in the end of a stem is reserved for numerals.
-So if a stem ends in 'ca' it must be interpreted as numeral.</p>
+noun. It is similar to an adjective in English and is often
+translated as an adjective, but not always, e.g. 'He is
+<i>handy</i> farmer' is translated as an adverb if he is skilled in
+farming, and as an apposition if he is generally a handy person,
+and at the same time a farmer.</p>
+<p>Numerals are positional, i.e. you pronounce each digit and
+symbol in one word. For convenience there are words for 3, 6, 9
+zeros and so on. The syllable 'θa' in the end of a stem is reserved
+for numerals. So if a stem ends in 'θa' it must be interpreted as
+numeral.</p>
 <p>Digits are:</p>
 <table>
 <tr>
@@ -1149,24 +1150,24 @@ So if a stem ends in 'ca' it must be interpreted as numeral.</p>
 <th>meaning</th>
 </tr>
 <tr>
-<td>ca</td>
+<td>duθa</td>
 <td>nominal number, e.g. number one, number two</td>
 </tr>
 <tr>
-<td>duca</td>
+<td>θa</td>
 <td>cardinal number, e.g. one apple, one time</td>
 </tr>
 <tr>
-<td>bica</td>
+<td>biθa</td>
 <td>ordinal number, e.g. first, second</td>
 </tr>
 <tr>
-<td>gaca</td>
+<td>gaθa</td>
 <td>multiplier, e.g. single / one by one, double / in pairs</td>
 </tr>
 </table>
-<p>So the numeral stem has valency of 1. E.g. nitucan - a number 12,
-saraducar - is in quantity of 63, ninibical - 11th.</p>
+<p>So the numeral stem has valency of 1. E.g. nituduθan - a number
+12, saraθar - is in quantity of 63, ninibiθal - 11th.</p>
 <h2>III. Syntax</h2>
 <p>The sentence may consist of a verb phrase with or without
 arguments, of just one argument, or of an interjection. There must
@@ -1179,27 +1180,27 @@ SO<sub>1</sub>O<sub>2</sub>VO<sub>3</sub> /
 SO<sub>1</sub>VO<sub>2</sub>O<sub>3</sub> /
 SVO<sub>1</sub>O<sub>2</sub>O<sub>3</sub> /
 VSO<sub>1</sub>O<sub>2</sub>O<sub>3</sub>. i.e. a verb can come
-before, after, or between its arguments, while maintaining the order
-of the arguments. Top-level adverb phrases
-can also appear anywhere before, after, or between a verb and
-arguments. Adverb phrases of levels 1-3 come strictly after the
-main word (noun, gerund, apposition, or adverb) and its direct
-arguments, if any. Appositions come after the main noun, its direct
-arguments, and adverb phrases, if any; there may be many
-appositions in a row. Conjunctions are not used with appositions.</p>
+before, after, or between its arguments, while maintaining the
+order of the arguments. Top-level adverb phrases can also appear
+anywhere before, after, or between a verb and arguments. Adverb
+phrases of levels 1-3 come strictly after the main word (noun,
+gerund, apposition, or adverb) and its direct arguments, if any.
+Appositions come after the main noun, its direct arguments, and
+adverb phrases, if any; there may be many appositions in a row.
+Conjunctions are not used with appositions.</p>
 <p>Appositions share the level of main noun. Adverbs and arguments
 are one level below the main word. If a word is of level 3, it may
 not have dependent words.</p>
 <p>All words of valency 2+ and gerunds of valency 1+ may have
-arguments just like a verb. E.g. 'to be a friend of mine' -&gt;
-'a friend me', where <i>me</i> comes without preposition as a
-direct object of noun.</p>
+arguments just like a verb. E.g. 'to be a friend of mine' -&gt; 'a
+friend me', where <i>me</i> comes without preposition as a direct
+object of noun.</p>
 <p>All arguments are optional. If one is skipped, it is the last,
 if two, they are the two last etc. To skip the first argument while
 keeping others, one may use the stem shift.</p>
 <p>Adverbs have comparative and superlative forms. Comparative
-phrase: mo ADV ce SENT le -- more X than Z [subsentence terminator].
-Superlative phrase: nai ADV -- the most X.</p>
+phrase: mo ADV ke SENT le -- more X than Z [subsentence
+terminator]. Superlative phrase: nai ADV -- the most X.</p>
 <p>Sentences, argument phrases, and adverb phrases of different
 levels use different conjunctions to enumerate things. They
 are:</p>
@@ -1212,66 +1213,66 @@ are:</p>
 </tr>
 <tr>
 <th>sentence</th>
-<td>ra</td>
-<td>ri</td>
-<td>ru</td>
+<td>ɣar</td>
+<td>ɣir</td>
+<td>ɣur</td>
 </tr>
 <tr>
 <th>adverb level=0</th>
-<td>ma</td>
-<td>mi</td>
-<td>mu</td>
+<td>ɣam</td>
+<td>ɣim</td>
+<td>ɣum</td>
 </tr>
 <tr>
 <th>adverb level=1</th>
-<td>meu</td>
-<td>mia</td>
-<td>mua</td>
+<td>ɣama</td>
+<td>ɣima</td>
+<td>ɣuma</td>
 </tr>
 <tr>
 <th>adverb level=2</th>
-<td>mai</td>
-<td>mie</td>
-<td>mui</td>
+<td>ɣami</td>
+<td>ɣimi</td>
+<td>ɣumi</td>
 </tr>
 <tr>
 <th>adverb level=3</th>
-<td>mau</td>
-<td>miu</td>
-<td>muo</td>
+<td>ɣamu</td>
+<td>ɣimu</td>
+<td>ɣumu</td>
 </tr>
 <tr>
 <th>argument level=0</th>
-<td>na</td>
-<td>ni</td>
-<td>nu</td>
+<td>ɣan</td>
+<td>ɣin</td>
+<td>ɣun</td>
 </tr>
 <tr>
 <th>argument level=1</th>
-<td>neu</td>
-<td>nia</td>
-<td>nua</td>
+<td>ɣana</td>
+<td>ɣina</td>
+<td>ɣuna</td>
 </tr>
 <tr>
 <th>argument level=2</th>
-<td>nai</td>
-<td>nie</td>
-<td>nui</td>
+<td>ɣani</td>
+<td>ɣini</td>
+<td>ɣuni</td>
 </tr>
 <tr>
 <th>argument level=3</th>
-<td>nau</td>
-<td>niu</td>
-<td>nuo</td>
+<td>ɣanu</td>
+<td>ɣinu</td>
+<td>ɣunu</td>
 </tr>
 </table>
 <p>Parser (requires javascript):</p>
-<button onclick="buttonOnclick()">parse</button><br/>
-<textarea id="textarea">luxan xokir sakitin kesal ra pavir saqesan
-qujan
-</textarea>
-<p>
-<div id="result"><br/><br/><br/><br/></div>
+<button onclick="buttonOnclick()">parse</button><br>
+<textarea id=
+"textarea">deman mavir ʃanan lexal ɣar guzor takam</textarea>
+<div id="result"><br>
+<br>
+<br>
+<br></div>
 </body>
 </html>
-
