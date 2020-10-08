@@ -1,8 +1,7 @@
 
 
 function ast2html(ast) {
-    var result = ''
-    var i
+    var i, result = ''
     if (Object.prototype.toString.call(ast) === '[object Array]') {
         if (ast) {
             for (i = 0; i < ast.length; i++) {
@@ -55,13 +54,16 @@ function buttonOnclick() {
 
 
 function parseStem(s) {
-    var i
+    var i, result = ''
     for (i = 0; i < dict.length; i++) {
         if (s == dict[i][0]) {
-            return dict[i][2] + ', ' + 'ULD#' + dict[i][1]
-            break
+            result += dict[i][2] + ', ' + 'ULD#' + dict[i][1] + '; '
         }
     }
+    if (result) {
+        return result
+    }
+    // else
     return '-'
 }
 
